@@ -8,20 +8,35 @@
     margin: 0px auto;
 }
 
-#profile_img {
+#profile_img, .camera-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 88px;
+}
+
+#img-wrapper {
     width: 88px;
     height: 88px;
-    display: block;
-    border-radius: 88px;
+    position: relative;
     margin: 0px auto 30px auto;
 }
 
-#slack {
-    display: none;
+/*==========  Class Rules  ==========*/
+.camera-icon {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: rgba(52, 64, 84, 0.6);
 }
 
+.camera-icon img {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
-/*==========  Class Rules  ==========*/
 .menu-block {
     width: 42px;
     height: 42px;
@@ -37,7 +52,7 @@
     justify-content: center;
     align-items: center;
     gap: 0 10px;
-    margin-bottom: 30px;
+    margin: 0px auto 30px auto;
 }
 
 .link {
@@ -45,12 +60,12 @@
     border-radius: 8px;
     width: 100%;
     background: #EAECF0;
-    padding: 30px 0;
+    padding: 25px 0;
     text-align: center;
     color: #101828;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    height: fit-content;
     margin: 10px 0;
     cursor: pointer;
 }
@@ -67,17 +82,23 @@
 .social-links {
     width: fit-content;
     height: fit-content;
-    margin: 20px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
-.social-links a {
-    margin: 0px 10px;
+.zuri-img {
+    width: 150px;
+    height: 25px;
 }
 
+.i4g-img {
+    width: 125px;
+    height: 25px;
+}
 
 /*==========  Element Rules  ==========*/
 h1 {
@@ -90,6 +111,27 @@ h1 {
     margin-bottom: 30px;
 }
 
+footer {
+    width: 90%;
+    height: 100%;
+    margin: 60px auto 10px auto;
+    padding: 30px 0px;
+    border-top: 1px solid #EAECF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+footer p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+}
+
 
 
 
@@ -97,6 +139,39 @@ h1 {
 @media screen and (min-width: 1024px) {
     .menu-block {
         background-image: url('/src/assets/images/share.png');
-        margin-right: 15%;
+        margin-right: 23%;
     }
+
+    .profile-links {
+        width: 90%;
+    }
+
+    footer {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+
+
+/*==========  Animation Rules  =========*/
+.link:hover {
+    background: #D0D5DD;
+    border: 1px solid #D0D5DD;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.link:focus {
+    background: #EAECF0;
+    border: 1px solid #98A2B3;
+    transition: all 0.5s ease-in-out;
+}
+
+.camera-icon:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;;
 }

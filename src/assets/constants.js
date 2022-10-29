@@ -3,12 +3,12 @@ export const linksMenu = [
     {
         name: 'Twitter Link',
         link: 'https://www.twitter.com/EraOrd',
-        id: 'twitter'
+        id: 'my__twitter'
     },
     {
         name: 'Zuri Team',
         link: 'https://training.zuri.team/',
-        id: 'btn-zuri'
+        id: 'btn__zuri'
     },
     {
         name: 'Zuri Books',
