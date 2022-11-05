@@ -1,10 +1,28 @@
 import '../assets/styles/contact.css'
 import { useForm } from 'react-hook-form'
+import { useState } from 'react';
 
 
 const Contact = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const [check, setCheck] = useState(0.5)
+
+  const checkBox = (e) => {
+    if (e.target.checked === true) {
+      setCheck(1)
+    }
+
+    else {
+      setCheck(0.5)
+    }
+  }
+
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const onSubmit = data => { 
+    setCheck(0.5)
+    reset()
+  }
+
+
 
   return ( 
     <>
@@ -69,14 +87,19 @@ const Contact = () => {
             <input 
               type="checkbox" 
               id="agreement" 
-              /*{...register("checkbox", { required: true })}
-              aria-invalid={errors.checkbox ? "true" : "false"} */
+              onClick={(e) => checkBox(e)}
+              {...register("checkbox", { required: true })}
+              aria-invalid={errors.checkbox ? "true" : "false"}
             />
             You agree to providing your data to Chidera who may contact you.
           </label>
-          {/*errors.checkbox?.type === 'required' && <p role="alert" className='required'> Please enter a message </p>*/}
           
-          <button id="btn__submit" type='submit'> Send message </button>
+          <button 
+            id="btn__submit" 
+            type='submit'
+            style={{'opacity': `${check}`}}
+            disabled={check === 1 ? false : true}
+          > Send message </button>
         </form>
       </div>
     </>
