@@ -1,0 +1,209 @@
+
+
+
+
+/*==========  ID Rules  ==========*/
+#agreement {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+#agreement-checkbox {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    color: #475467;
+    line-height: 24px;
+}
+
+#btn__submit {
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    margin: 30px auto;
+    background: #1570EF;
+    border: 1px solid #1570EF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+#name-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*==========  Class Rules  ==========*/
+.input-wrapper {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.contact-wrapper {
+    width: 90%;
+    height: 100%;
+    margin: 50px auto;
+}
+
+.contact-wrapper h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #101828;
+}
+
+.contact-info {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;  
+    color: #475467;
+}
+
+.contact-form {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+}
+
+.contact-form input:placeholder-shown,
+.contact-form textarea:placeholder-shown {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
+    padding: 5px 15px;
+}
+
+.contact-form label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 90%;
+    height: 35px;
+    margin-top: 10px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    padding-left: 15px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101828;
+}
+
+.contact-form textarea {
+    height: auto;
+    padding-top: 15px;
+}
+
+.required {
+    margin: 10px 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F83F23;
+}
+
+.spacer {
+    margin: 20px auto;
+}
+
+
+
+/*==========  Element Rules  ==========*/
+
+
+
+
+
+
+/*==========  Animation and Pseudo Rules  ==========*/
+.contact-form input:focus {
+    border: 1px solid #84CAFF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+#btn__submit:hover {
+    background-color: #175CD3;
+    border: 1px solid #175CD3;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    background: #F9FAFB;
+    border: 1px solid #1570EF;
+}
+
+
+
+
+
+/*==========  Media Queries Rules  ==========*/
+@media  screen and (min-width: 1024px) {
+    .contact-wrapper {
+        width: 50%;
+    } 
+
+    .contact-form textarea, #email {
+        width: 95%;
+    }
+
+    .contact-form input {
+        width: 100%;
+    }
+
+    .input-wrapper {
+        width: 43%;
+        height: fit-content;  
+    }
+
+    .input-wrapper:nth-child(1) {
+        margin-right: 45px;
+    }
+
+    #name-wrapper {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1336px) {
+    .input-wrapper {
+        width: 44%;
+    }
+
+    .input-wrapper:nth-child(1) {
+        margin-right: 50px;
+    }
+}

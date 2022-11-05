@@ -4,8 +4,7 @@ import ProfilePhoto from '../assets/images/profile_photo.jpg'
 import Slack from '../assets/images/slack.png'
 import Github from '../assets/images/github.png'
 import Camera from '../assets/images/camera.png'
-import Zuri from '../assets/images/zuri.png'
-import I4G from '../assets/images/I4G.png'
+import { Link } from 'react-router-dom'
 
 
 const Profile = () => {
@@ -31,6 +30,11 @@ const Profile = () => {
             </span>
           </a>
         ))}
+
+        {/* Contact Me */}
+        <Link to={'/contact'} id='contact' rel="noreferrer" className='link'>
+          Contact Me
+        </Link>
       </div>
 
       {/* Socials */}
@@ -40,13 +44,6 @@ const Profile = () => {
           <img src={Github} alt="Github account" />
         </a>
       </div>
-
-      {/* Footer */}
-      <footer>
-        <img src={Zuri} alt="Zuri Intersnhip Program Logo" className='zuri-img' />
-        <p> HNG Internship 9 Frontend Task </p>
-        <img src={I4G} alt="Ingressive 4 Good Logo" className='i4g-img' />
-      </footer>
     </>
   );
 }
