@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
           </div>    
 
-          <label htmlFor="email" id="email"> Email </label>
+          <label htmlFor="email"> Email </label>
           <input 
             type="email" 
             id="email" 
