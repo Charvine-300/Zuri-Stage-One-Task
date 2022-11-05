@@ -16,7 +16,7 @@ const Contact = () => {
     }
   }
 
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: onchange});
   const onSubmit = data => { 
     setCheck(0.5)
     reset()
@@ -44,6 +44,7 @@ const Contact = () => {
                 placeholder='Enter your first name' 
                 {...register("firstName", { required: true })}
                 aria-invalid={errors.firstName ? "true" : "false"} 
+                style={{'borderColor': errors.firstName ? '#F83F23' : 'black'}}
               />
               {errors.firstName?.type === 'required' && <p role="alert" className='required'>First name is required</p>}
             </div>
@@ -55,6 +56,7 @@ const Contact = () => {
                 placeholder='Enter your last name' 
                 {...register("lastName", { required: true })}
                 aria-invalid={errors.lastName ? "true" : "false"} 
+                style={{'borderColor': errors.lastName ? '#F83F23' : 'black'}}
               />
               {errors.lastName?.type === 'required' && <p role="alert" className='required'>Last name is required</p>}
             </div>
@@ -67,6 +69,7 @@ const Contact = () => {
             placeholder='yourname@email.com' 
             {...register("email", { required: true })}
             aria-invalid={errors.email ? "true" : "false"} 
+            style={{'borderColor': errors.email ? '#F83F23' : 'black'}}
           />
           {errors.email?.type === 'required' && <p role="alert" className='required'>Email address is required</p>}
           <div className="spacer"></div>
@@ -76,9 +79,11 @@ const Contact = () => {
             id="message" 
             cols="30" 
             rows="5" 
+            role='alert'
             placeholder="Send me a message and I'll reply you as soon as possible..."
             {...register("message", { required: true })}
             aria-invalid={errors.message ? "true" : "false"} 
+            style={{'borderColor': errors.message ? '#F83F23' : 'black'}}
           ></textarea>
           {errors.message?.type === 'required' && <p role="alert" className='required'> Please enter a message </p>}
           <div className="spacer"></div>
